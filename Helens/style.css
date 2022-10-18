@@ -1,0 +1,193 @@
+/*
+Theme Name:  Helen
+Text Domain: Helen
+Version: 1.4
+Discription: ---------- no needed--------
+Tags: minimalistic, black
+Author: Michał Heleniak
+Author URI: https://heleniakmichal.eu
+*/
+@import url("https://use.typekit.net/cfs2xiz.css");
+
+:root {
+	--Coocon-font-family: ff-cocon-pro, sans-serif;
+	--Filmotype-font-family: filmotype-maxwell, sans-serif;
+	--trackbustersRED: #ef4136;
+}
+body {
+	font-family: var(--Coocon-font-family);
+}
+.wrap_all {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-family: var(--Coocon-font-family);
+}
+.helen_customtxtLogo:link {
+	font-family: var(--Filmotype-font-family);
+	font-size: calc(2rem + 2vh);
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	color: black;
+}
+.helen_customtxtLogo:hover {
+	color: var(--trackbustersRED);
+}
+
+.helen_menu {
+	list-style: none;
+	text-decoration: none;
+	display: block;
+	padding: 2% 0 2% 2%;
+	font-size: 3vh;
+	margin: 0 0 5% 0;
+	box-shadow: inset 0 -18px 15px -17px rgb(0 0 0 / 40%);
+	line-height: 2.2;
+}
+.helen_menu.block {
+	display: none;
+}
+.menu_bars {
+	display: block;
+}
+.closeMob,
+.bars {
+	display: none;
+	width: 100px;
+	height: 100px;
+}
+.closeMob.visible {
+	display: block;
+}
+.bars.visible {
+	display: block;
+}
+.helen_menu li > a {
+	text-transform: lowercase;
+	text-decoration: none;
+	color: black;
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	padding: 0 0 0 20px;
+}
+.helen_menu li > a:hover {
+	text-decoration: none;
+	color: var(--trackbustersRED);
+	border-bottom: 2px solid var(--trackbustersRED);
+}
+h1.helen_logo {
+	font-family: var(--Filmotype-font-family);
+	font-size: 40px;
+	text-align: center;
+}
+.helen_mobile_menu {
+	display: block;
+	text-align: left;
+}
+.hero-home {
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.home-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.helen_movie {
+	width: 100%;
+	max-width: 1920px;
+}
+.helen_movie iframe {
+	width: 100%;
+	height: 500px;
+}
+.video-home {
+	width: 100%;
+	margin: 0 auto;
+}
+footer {
+	position: relative;
+	width: 100%;
+	margin: 10% 0 0 0;
+}
+.helen_customtxtFooter {
+	text-align: center;
+	box-shadow: rgb(0 0 0 / 15%) -10px 20px 20px -20px;
+	border-bottom: 1px solid lightgray;
+	width: 100%;
+	font-size: calc(1rem + 1vh);
+	font-weight: 200;
+	letter-spacing: calc(1px + 2vw);
+	line-height: 3;
+}
+.soclialIcon-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+.socialIcon {
+	opacity: 0.5;
+	position: relative;
+	z-index: 1;
+}
+.socialIcon:hover {
+	opacity: 1;
+}
+.socialIcon::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 90%;
+	bottom: 80%;
+}
+.socialIcon:hover::after {
+	background: var(--trackbustersRED);
+	z-index: 0;
+}
+
+@media (min-width: 1024px) {
+	.helen_menu {
+		font-size: 25px;
+		box-shadow: none;
+		margin: 0;
+	}
+	.helen_mobile_menu {
+		display: none;
+	}
+	.helen_menu.block {
+		display: flex;
+		gap: 20px;
+	}
+	.menu_bars {
+		display: none;
+	}
+	.helen_menu li > a {
+		text-transform: lowercase;
+		text-decoration: none;
+		color: black;
+		width: 100%;
+		display: inline-block;
+		border-bottom: none;
+		padding: 0;
+	}
+	.helen_menu li > a:hover {
+		border-bottom: none;
+	}
+}
